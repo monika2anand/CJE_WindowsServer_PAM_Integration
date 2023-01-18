@@ -5,7 +5,8 @@ pipeline {
         TEST02 = credentials('Application-CyberArk-admin-cje_poc')
     }
     
-    stage('Verify PAM connection') {
+    stages{
+            stage('Verify PAM connection') {
             steps {
                 script {
                     println "TEST02 USR: " + "${TEST02_USR}".substring(0, 7)
@@ -13,4 +14,6 @@ pipeline {
                 }
             }
         }
+    }
+    
     }
