@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'PPS_Preprod'
-    }
+    agent any
             
     environment {
         TEST02 = credentials('Application-CyberArk-admin-cje_poc')
