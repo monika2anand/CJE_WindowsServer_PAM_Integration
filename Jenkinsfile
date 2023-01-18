@@ -1,10 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        label 'PPS_Preprod'
+    }
             
     environment {
         TEST02 = credentials('Application-CyberArk-admin-cje_poc')
     }
-    
     stages{
             stage('Verify PAM connection') {
             steps {
@@ -14,6 +15,6 @@ pipeline {
                 }
             }
         }
-    }
+        }
     
     }
