@@ -17,9 +17,7 @@ pipeline {
         }
     }
     post {  
-         always {  
-            // echo 'This will always run'  
-         }  
+           
          success {  
              echo 'CJE Windows server integration with PAM success'  
          }  
