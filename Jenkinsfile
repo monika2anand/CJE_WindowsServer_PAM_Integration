@@ -4,7 +4,7 @@ pipeline {
     }
             
     environment {
-        TEST02 = credentials('Application-CyberArk-admin-cje_poc1')
+        TEST02 = credentials('Application-CyberArk-admin-cje_poc')
     }
     stages{
             stage('Verify PAM connection') {
